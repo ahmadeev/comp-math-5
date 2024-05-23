@@ -1,7 +1,6 @@
 package org.example;
 
-import static org.example.Test.getLagrangePolynomialSum;
-import static org.example.Test.getNewtonPolynomial;
+import static org.example.Test.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,12 +15,19 @@ public class Main {
 
         //  Ньютон (неравноотстоящие узлы)
 
-        double[] x = {0.15, 0.2, 0.33, 0.47};   //  x = 0.22
-        double[] y = {1.25, 2.38, 3.79, 5.44};
+//        double[] x = {0.15, 0.2, 0.33, 0.47};   //  x = 0.22
+//        double[] y = {1.25, 2.38, 3.79, 5.44};
+
+        //  Ньютон (равноотстоящие узлы)
+
+        double[] x = {};   //  x =
+        double[] y = {};
 
         //System.out.println(getLagrangePolynomialSum(105, x, y));
 
-        System.out.println(getNewtonPolynomial(0.22, x, y));
+        //System.out.println(getNewtonPolynomialWithNotEquidistantPoints(0.22, x, y));
+
+        System.out.println();
 
     }
 }

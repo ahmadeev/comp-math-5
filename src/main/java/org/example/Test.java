@@ -28,7 +28,7 @@ public class Test {
         return result;
     }
 
-    public static double getNewtonPolynomial(double variableX, double[] x, double[] y) {
+    public static double getNewtonPolynomialWithNotEquidistantPoints(double variableX, double[] x, double[] y) {
         int size = x.length;
 
         //  массив неразделенных сумм (по количеству узлов)
@@ -63,7 +63,7 @@ public class Test {
         //  вычисление значения полинома в точке
         double result = 0;
         for(int i = 0; i < size; i++) {
-            result += array[i][0] * getMultipleForNewtonPolynomial(i, variableX, x);
+            result += array[i][0] * getMultipleForNewtonPolynomialWithNotEquidistantPoints(i, variableX, x);
         }
         return result;
     }
@@ -73,7 +73,7 @@ public class Test {
      * variableX -- значение переменной x,
      * x -- массив значений координаты x из таблицы.
      */
-    public static double getMultipleForNewtonPolynomial(int position, double variableX, double[] x) {
+    public static double getMultipleForNewtonPolynomialWithNotEquidistantPoints(int position, double variableX, double[] x) {
         double result = 1;
         for(int i = 0; i < position; i++) {
             result *= variableX - x[position - 1];
